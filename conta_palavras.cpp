@@ -8,6 +8,7 @@
 #include <sstream>
 #include <vector>
 #include <string>
+#include <algorithm>
 
 /**
  * @brief lê o conteúdo do arquivo .txt, separa por espaço e armazena suas palavras em um vetor.
@@ -43,6 +44,20 @@ std::vector<std::string> lerArquivo(const std::string& nomeArquivo) {
 }
 
 std::vector<std::pair<std::string, int>> contarOcorrencias(const std::vector<std::string>& palavras) {
+	std::vector<std::pair<std::string, int>> ocorrencias;
 
-	return {};
+		for (const auto& palavra : palavras) {
+			auto it = std::find_if(ocorrencias.begin(), ocorrencias.end(),
+				[&palavra](const std::pair<std::string, int>& p) {
+					return p.first == palavra;
+				});
+
+			if (it != ocorrencias.end()) {
+				it->second++;
+			} else {
+				ocorrencias.push_back({palavra, 1});
+			}
+		}
+
+		return ocorrencias;
 }

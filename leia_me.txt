@@ -1,0 +1,28 @@
+﻿para adicionar javadoc em uma nova função no conta_palavras.cpp, rode no terminal: python script_doxygen.py 
+
+obs: nao esquecer de fazer o leiame como esta na descricao
+pseudo codigo:
+obs: nao usar map
+obs: o programa devera ser dividido em modulos
+obs[commits]: fazer teste (e falhar), fazer codigo passavel, refatorar
+
+entrada:
+ler o arquivo input.txt
+
+processamento:
+contar quantas palavras diferentes o texto tem
+(diferencia entre maiúsculas e minúsculas)
+listar as palavras e número de ocorrências em ordem alfabética.
+(Os separadores são o espaço a quebra de linha)
+
+
+saida:
+"
+é: 1
+este: 1
+o: 1
+que: 1
+será: 1
+texto: 2
+utilizado: 1 
+"

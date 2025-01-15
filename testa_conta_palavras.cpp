@@ -3,9 +3,8 @@
  * \file testa_conta_palavras.cpp
  */
 
-#include "conta_palavras.hpp"
-
 #define CATCH_CONFIG_MAIN
+#include "conta_palavras.hpp"
 #include "catch.hpp"
 #include <fstream>
   
@@ -28,7 +27,7 @@ TEST_CASE("Teste de Abertura de Arquivo", "[arquivo]") {
 }
 
 TEST_CASE("Ler conteúdo do arquivo", "[arquivo]") {
-    std::vector<std::string> conteudo = lerArquivo("exemplo.txt");
+    std::vector<std::string> conteudo = lerArquivo("input.txt");
 
     REQUIRE_FALSE(conteudo.empty());  // O vetor não deve estar vazio
 }

@@ -42,3 +42,7 @@ std::vector<std::string> lerArquivo(const std::string& nomeArquivo) {
     return palavras;
 }
 
+std::vector<std::pair<std::string, int>> contarOcorrencias(const std::vector<std::string>& palavras) {
+
+	return {};
+}

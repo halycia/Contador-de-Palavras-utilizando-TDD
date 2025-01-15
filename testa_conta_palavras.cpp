@@ -91,3 +91,29 @@ TEST_CASE("Ler palavras do arquivo separadas por tab", "[arquivo]") {
     REQUIRE(resultado[3] == "outros");
     REQUIRE(resultado[4] == "lugares.");
 }
+
+#include "conta_palavras.hpp"
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
+
+TEST_CASE("Contagem de palavras no arquivo", "[contagem]") {
+    std::vector<std::string> palavras = lerArquivo("tests_files/test1.txt");
+    std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+
+    REQUIRE(ocorrencias.size() == 5);
+
+    REQUIRE(ocorrencias[0].first == "Olá");
+    REQUIRE(ocorrencias[0].second == 1);
+
+    REQUIRE(ocorrencias[1].first == "mundo");
+    REQUIRE(ocorrencias[1].second == 1);
+
+    REQUIRE(ocorrencias[2].first == "e");
+    REQUIRE(ocorrencias[2].second == 1);
+
+    REQUIRE(ocorrencias[3].first == "outros");
+    REQUIRE(ocorrencias[3].second == 1);
+
+    REQUIRE(ocorrencias[4].first == "lugares.");
+    REQUIRE(ocorrencias[4].second == 1);
+}

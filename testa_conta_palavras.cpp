@@ -7,19 +7,7 @@
 #include "conta_palavras.hpp"
 #include "catch.hpp"
 #include <fstream>
-  
 
-
-//TEST_CASE( "Testa velha", "[single-file]" ) {
-//	int teste1[3][3]= {   { 2, 0, 1 }, 
-//	                      { 2, 0, 1 },
-//						  { 0, 2, 1 }
-//					  };
-//    REQUIRE( VerificaVelha(teste1) == 1 );
-//
-//
-//} 
- 
 
 TEST_CASE("Teste de Abertura de Arquivo", "[arquivo]") {
     std::ifstream arquivo("input.txt");
@@ -92,10 +80,6 @@ TEST_CASE("Ler palavras do arquivo separadas por tab", "[arquivo]") {
     REQUIRE(resultado[4] == "lugares.");
 }
 
-#include "conta_palavras.hpp"
-#define CATCH_CONFIG_MAIN
-#include "catch.hpp"
-
 TEST_CASE("Contagem de palavras no arquivo", "[contagem]") {
     std::vector<std::string> palavras = lerArquivo("tests_files/test1.txt");
     std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
@@ -116,4 +100,25 @@ TEST_CASE("Contagem de palavras no arquivo", "[contagem]") {
 
     REQUIRE(ocorrencias[4].first == "lugares.");
     REQUIRE(ocorrencias[4].second == 1);
+}
+
+TEST_CASE("Contagem de palavras e ordenação", "[arquivo]") {
+    std::vector<std::string> palavras = lerArquivo("tests_files/test6.txt");
+    std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+
+    REQUIRE(ocorrencias[0].first == "é");
+    REQUIRE(ocorrencias[1].first == "este");
+    REQUIRE(ocorrencias[2].first == "o");
+    REQUIRE(ocorrencias[3].first == "que");
+    REQUIRE(ocorrencias[4].first == "será");
+    REQUIRE(ocorrencias[5].first == "texto");
+    REQUIRE(ocorrencias[6].first == "utilizado");
+
+    REQUIRE(ocorrencias[0].second == 1);
+    REQUIRE(ocorrencias[1].second == 1);
+    REQUIRE(ocorrencias[2].second == 1);
+    REQUIRE(ocorrencias[3].second == 1);
+    REQUIRE(ocorrencias[4].second == 1);
+    REQUIRE(ocorrencias[5].second == 2);
+    REQUIRE(ocorrencias[6].second == 1);
 }

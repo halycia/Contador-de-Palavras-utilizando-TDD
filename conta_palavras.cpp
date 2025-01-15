@@ -43,6 +43,23 @@ std::vector<std::string> lerArquivo(const std::string& nomeArquivo) {
     return palavras;
 }
 
+
+/**
+ * @brief Conta a quantidade de ocorrências de cada palavra em um vetor de palavras.
+ *
+ * @param palavras [const std::vector<std::string>&] - Vetor contendo as palavras a serem analisadas.
+ * 
+ * @return Retorna um vetor de pares, onde cada par contém uma palavra e a quantidade de vezes que ela apareceu.
+ *
+ * @note
+ * ### Assertivas de Entrada:
+ *  - O vetor de palavras deve ser composto apenas por strings não vazias.
+ *  - A função diferencia entre maiúsculas e minúsculas (ex: "Palavra" e "palavra" são tratadas como palavras distintas).
+ *
+ * ### Assertivas de Saída:
+ *  - A função retorna um vetor de pares (palavra, quantidade), onde cada palavra é única e a quantidade corresponde ao número de vezes que ela apareceu no vetor de entrada.
+ *  - Se o vetor de palavras estiver vazio, a função retorna um vetor vazio.
+ */
 std::vector<std::pair<std::string, int>> contarOcorrencias(const std::vector<std::string>& palavras) {
 	std::vector<std::pair<std::string, int>> ocorrencias;
 
@@ -61,3 +78,5 @@ std::vector<std::pair<std::string, int>> contarOcorrencias(const std::vector<std
 
 		return ocorrencias;
 }
+
+void ordenarPalavras(std::vector<std::pair<std::string, int>>& ocorrencias);

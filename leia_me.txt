@@ -26,3 +26,7 @@ será: 1
 texto: 2
 utilizado: 1 
 "
+
+obs: no arquivo pdf do trabalho 2, a especificação diz que há diferença entre letras maiúsculas 
+e minúsculas, mas a palavra que começa com letra maíuscula no input de exemplo aparece com todas 
+as letras minúsculas no exemplo de output. Seguir especificação, não o exemplo.

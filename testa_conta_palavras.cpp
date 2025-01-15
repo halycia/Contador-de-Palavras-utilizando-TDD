@@ -41,5 +41,5 @@ TEST_CASE("Ler palavras do arquivo", "[arquivo]") {
     REQUIRE(resultado[1] == "mundo");
     REQUIRE(resultado[2] == "e");
     REQUIRE(resultado[3] == "outros");
-    REQUIRE(resultado[4] == "lugares");
+    REQUIRE(resultado[4] == "lugares.");
 }

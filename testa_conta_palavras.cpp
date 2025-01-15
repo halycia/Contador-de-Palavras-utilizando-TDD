@@ -26,3 +26,9 @@ TEST_CASE("Teste de Abertura de Arquivo", "[arquivo]") {
     std::ifstream arquivo("input.txt");
     REQUIRE(arquivo.is_open());
 }
+
+TEST_CASE("Ler conteúdo do arquivo", "[arquivo]") {
+    std::vector<std::string> conteudo = lerArquivo("exemplo.txt");
+
+    REQUIRE_FALSE(conteudo.empty());  // O vetor não deve estar vazio
+}

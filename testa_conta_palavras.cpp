@@ -29,5 +29,17 @@ TEST_CASE("Teste de Abertura de Arquivo", "[arquivo]") {
 TEST_CASE("Ler conteúdo do arquivo", "[arquivo]") {
     std::vector<std::string> conteudo = lerArquivo("input.txt");
 
-    REQUIRE_FALSE(conteudo.empty());  // O vetor não deve estar vazio
+    REQUIRE_FALSE(conteudo.empty());
+}
+
+TEST_CASE("Ler palavras do arquivo", "[arquivo]") {
+    std::vector<std::string> resultado = lerArquivo("test.txt");
+
+    REQUIRE(resultado.size() == 5);
+
+    REQUIRE(resultado[0] == "Olá");
+    REQUIRE(resultado[1] == "mundo");
+    REQUIRE(resultado[2] == "e");
+    REQUIRE(resultado[3] == "outros");
+    REQUIRE(resultado[4] == "lugares");
 }

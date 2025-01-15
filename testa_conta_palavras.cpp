@@ -32,8 +32,20 @@ TEST_CASE("Ler conteúdo do arquivo", "[arquivo]") {
     REQUIRE_FALSE(conteudo.empty());
 }
 
-TEST_CASE("Ler palavras do arquivo", "[arquivo]") {
-    std::vector<std::string> resultado = lerArquivo("test.txt");
+TEST_CASE("Ler palavras do arquivo separadas por somente 1 espaço", "[arquivo]") {
+    std::vector<std::string> resultado = lerArquivo("tests_files/test1.txt");
+
+    REQUIRE(resultado.size() == 5);
+
+    REQUIRE(resultado[0] == "Olá");
+    REQUIRE(resultado[1] == "mundo");
+    REQUIRE(resultado[2] == "e");
+    REQUIRE(resultado[3] == "outros");
+    REQUIRE(resultado[4] == "lugares.");
+}
+
+TEST_CASE("Ler palavras do arquivo separadas por 2 espaços", "[arquivo]") {
+    std::vector<std::string> resultado = lerArquivo("tests_files/test2.txt");
 
     REQUIRE(resultado.size() == 5);
 

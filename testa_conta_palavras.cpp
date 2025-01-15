@@ -55,3 +55,15 @@ TEST_CASE("Ler palavras do arquivo separadas por 2 espaços", "[arquivo]") {
     REQUIRE(resultado[3] == "outros");
     REQUIRE(resultado[4] == "lugares.");
 }
+
+TEST_CASE("Ler palavras do arquivo separadas por 1 espaço e 3 espaços adicionais no início e fim da string", "[arquivo]") {
+    std::vector<std::string> resultado = lerArquivo("tests_files/test3.txt");
+
+    REQUIRE(resultado.size() == 5);
+
+    REQUIRE(resultado[0] == "Olá");
+    REQUIRE(resultado[1] == "mundo");
+    REQUIRE(resultado[2] == "e");
+    REQUIRE(resultado[3] == "outros");
+    REQUIRE(resultado[4] == "lugares.");
+}

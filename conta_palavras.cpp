@@ -5,35 +5,40 @@
  
 #include "conta_palavras.hpp"
 #include <fstream>
+#include <sstream>
 #include <vector>
 #include <string>
 
 /**
- * @brief ler o conteúdo do arquivo input.txt
+ * @brief lê o conteúdo do arquivo .txt, separa por espaço e armazena suas palavras em um vetor.
  *
- * @param nomeArquivo [const std::string& - somente arquivo .txt]
+ * @param nomeArquivo [const std::string&] - nome do arquivo .txt a ser lido
 
  * @return retorna o vetor linhas com cada linha lida. Se não for aberto, o programa não faz nada e retorna o vetor vazio.
  *
  * @note
  * ### Assertivas de Entrada:
- *  - arquivo .txt
+ *  - deve ser um arquivo .txt
  *
  * ### Assertivas de Saída:
- *  - retorna o vetor linhas com cada linha lida. Se não for aberto, o programa não faz nada e retorna o vetor vazio.
+ *  - Retorna um vetor com as palavras extraídas do arquivo.
+ *  - Se o arquivo não for aberto corretamente, o programa não faz nada e retorna o vetor vazio.
  */
 std::vector<std::string> lerArquivo(const std::string& nomeArquivo) {
-	std::ifstream arquivo(nomeArquivo);
-    std::vector<std::string> linhas;
-    std::string linha;
+    std::ifstream arquivo(nomeArquivo);
+    std::vector<std::string> palavras;
+    std::string linha, palavra;
 
     if (arquivo.is_open()) {
         while (std::getline(arquivo, linha)) {
-            linhas.push_back(linha);
+            std::istringstream stream(linha);
+            while (stream >> palavra) {
+                palavras.push_back(palavra);
+            }
         }
         arquivo.close();
     }
 
-    return linhas;
-	}
+    return palavras;
+}
 

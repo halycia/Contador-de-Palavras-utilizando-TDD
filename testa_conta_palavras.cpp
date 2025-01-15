@@ -79,3 +79,15 @@ TEST_CASE("Ler palavras do arquivo separadas por quebra de linha", "[arquivo]") 
     REQUIRE(resultado[3] == "outros");
     REQUIRE(resultado[4] == "lugares.");
 }
+
+TEST_CASE("Ler palavras do arquivo separadas por tab", "[arquivo]") {
+    std::vector<std::string> resultado = lerArquivo("tests_files/test5.txt");
+
+    REQUIRE(resultado.size() == 5);
+
+    REQUIRE(resultado[0] == "Olá");
+    REQUIRE(resultado[1] == "mundo");
+    REQUIRE(resultado[2] == "e");
+    REQUIRE(resultado[3] == "outros");
+    REQUIRE(resultado[4] == "lugares.");
+}

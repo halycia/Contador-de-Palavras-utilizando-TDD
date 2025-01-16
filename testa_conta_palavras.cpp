@@ -244,3 +244,19 @@ TEST_CASE("Ler e ordenar palavras com diferentes maiúsculas e minúsculas", "[o
     REQUIRE(ocorrencias[4].second == 1);
     REQUIRE(ocorrencias[5].second == 1);
 }
+
+TEST_CASE("Contagem de palavras únicas e repetidas com letras maiúsculas e minúsculas", "[contagem]") {
+    std::vector<std::string> palavras = lerArquivo("tests_files/test13.txt");
+    std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+
+    REQUIRE(ocorrencias.size() == 3);
+
+    REQUIRE(ocorrencias[0].first == "apple");
+    REQUIRE(ocorrencias[0].second == 1);
+
+    REQUIRE(ocorrencias[1].first == "Apple");
+    REQUIRE(ocorrencias[1].second == 1);
+
+    REQUIRE(ocorrencias[2].first == "banana");
+    REQUIRE(ocorrencias[2].second == 2);
+}

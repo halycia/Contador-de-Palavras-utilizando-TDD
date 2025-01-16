@@ -135,6 +135,13 @@ TEST_CASE("Ordenação por letras minúsculas, maiúsculas e tamanho da palavra 
     REQUIRE(ocorrencias[3].first == "Ba");
     REQUIRE(ocorrencias[4].first == "Ban");
     REQUIRE(ocorrencias[5].first == "Banana");
+
+	REQUIRE(ocorrencias[0].second == 1);
+    REQUIRE(ocorrencias[1].second == 1);
+    REQUIRE(ocorrencias[2].second == 1);
+    REQUIRE(ocorrencias[3].second == 1);
+    REQUIRE(ocorrencias[4].second == 1);
+    REQUIRE(ocorrencias[5].second == 1);
 }
 
 TEST_CASE("Ordenação por letras minúsculas, maiúsculas e tamanho da palavra com palavras diferentes", "[ordenarPalavras]") {
@@ -148,5 +155,35 @@ TEST_CASE("Ordenação por letras minúsculas, maiúsculas e tamanho da palavra 
     REQUIRE(ocorrencias[3].first == "chover");
     REQUIRE(ocorrencias[4].first == "Chover");
     REQUIRE(ocorrencias[5].first == "Ciclista");
+
+	REQUIRE(ocorrencias[0].second == 1);
+    REQUIRE(ocorrencias[1].second == 1);
+    REQUIRE(ocorrencias[2].second == 1);
+    REQUIRE(ocorrencias[3].second == 1);
+    REQUIRE(ocorrencias[4].second == 1);
+    REQUIRE(ocorrencias[5].second == 1);
+
+}
+
+TEST_CASE("Ordenação por letras minúsculas, maiúsculas, tamanho da palavra e acentuação", "[ordenarPalavras]") {
+    std::vector<std::string> palavras = lerArquivo("tests_files/test9.txt");
+    std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+	ordenarPalavras(ocorrencias);
+
+	REQUIRE(ocorrencias[0].first == "é");
+    REQUIRE(ocorrencias[1].first == "Este");
+    REQUIRE(ocorrencias[2].first == "o");
+    REQUIRE(ocorrencias[3].first == "que");
+    REQUIRE(ocorrencias[4].first == "será");
+    REQUIRE(ocorrencias[5].first == "texto");
+	REQUIRE(ocorrencias[5].first == "utilizado");
+
+	REQUIRE(ocorrencias[0].second == 1);
+    REQUIRE(ocorrencias[1].second == 1);
+    REQUIRE(ocorrencias[2].second == 1);
+    REQUIRE(ocorrencias[3].second == 1);
+    REQUIRE(ocorrencias[4].second == 1);
+    REQUIRE(ocorrencias[5].second == 2);
+    REQUIRE(ocorrencias[6].second == 1);
 
 }

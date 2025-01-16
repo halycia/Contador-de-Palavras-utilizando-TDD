@@ -187,3 +187,18 @@ TEST_CASE("Ordenação por letras minúsculas, maiúsculas, tamanho da palavra e
     REQUIRE(ocorrencias[6].second == 1);
 
 }
+
+TEST_CASE("Contagem de palavras e exibição no terminal", "[contagem]") {
+
+    std::vector<std::string> palavras = lerArquivo("input.txt");
+
+    std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+
+    ordenarPalavras(ocorrencias);
+
+    // Exibe o resultado no terminal
+    for (const auto& par : ocorrencias) {
+        std::cout << par.first << ": " << par.second << std::endl;
+    }
+}
+

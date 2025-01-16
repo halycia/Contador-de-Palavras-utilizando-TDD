@@ -290,3 +290,22 @@ TEST_CASE("Contagem de palavras distintas sem repetição", "[contagem]") {
     REQUIRE(ocorrencias[2].first == "fish");
     REQUIRE(ocorrencias[2].second == 1);
 }
+
+TEST_CASE("Verificar contagem de palavras repetidas", "[contagem]") {
+    std::vector<std::string> palavras = lerArquivo("tests_files/test16.txt");
+    std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+
+    REQUIRE(ocorrencias.size() == 4);
+
+    REQUIRE(ocorrencias[0].first == "sun");
+    REQUIRE(ocorrencias[0].second == 2);
+
+    REQUIRE(ocorrencias[1].first == "moon");
+    REQUIRE(ocorrencias[1].second == 1);
+
+    REQUIRE(ocorrencias[2].first == "star");
+    REQUIRE(ocorrencias[2].second == 1);
+
+    REQUIRE(ocorrencias[3].first == "earth");
+    REQUIRE(ocorrencias[3].second == 1);
+}

@@ -319,3 +319,13 @@ TEST_CASE("Contagem de palavras com apenas 1 palavra no arquivo", "[contagem]") 
     REQUIRE(ocorrencias[0].first == "only");
     REQUIRE(ocorrencias[0].second == 1);
 }
+
+TEST_CASE("Contagem de um caracter") {
+   	std::vector<std::string> palavras = lerArquivo("tests_files/test18.txt");
+    std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+    ordenarPalavras(ocorrencias);
+
+	REQUIRE(ocorrencias.size() == 1);
+    REQUIRE(ocorrencias[0].first == "e");
+
+}

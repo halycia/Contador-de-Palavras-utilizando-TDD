@@ -213,3 +213,34 @@ TEST_CASE("Ler e ordenar somente uma palavra", "[ordenarPalavras]") {
 	REQUIRE(ocorrencias[0].second == 1);
 
 }
+
+TEST_CASE("Ler e ordenar arquivo vazio", "[ordenarPalavras]") { 
+
+    std::vector<std::string> palavras = lerArquivo("tests_files/test11.txt"); 
+    
+    std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+
+    ordenarPalavras(ocorrencias);
+
+    REQUIRE(ocorrencias.empty());
+}
+
+TEST_CASE("Ler e ordenar palavras com diferentes maiúsculas e minúsculas", "[ordenarPalavras]") {
+    std::vector<std::string> palavras = lerArquivo("tests_files/test12.txt");
+    std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+    ordenarPalavras(ocorrencias);
+
+    REQUIRE(ocorrencias[0].first == "a");
+    REQUIRE(ocorrencias[1].first == "A");
+    REQUIRE(ocorrencias[2].first == "b");
+    REQUIRE(ocorrencias[3].first == "B");
+    REQUIRE(ocorrencias[4].first == "z");
+    REQUIRE(ocorrencias[5].first == "Z");
+
+    REQUIRE(ocorrencias[0].second == 1);
+    REQUIRE(ocorrencias[1].second == 1);
+    REQUIRE(ocorrencias[2].second == 1);
+    REQUIRE(ocorrencias[3].second == 1);
+    REQUIRE(ocorrencias[4].second == 1);
+    REQUIRE(ocorrencias[5].second == 1);
+}

@@ -39,3 +39,8 @@ clean:
 
 javadoc:
 	python3 script_doxygen.py
+
+main:
+	chcp 65001 > nul
+	g++ conta_palavras.cpp main.cpp -o conta_palavras
+	./conta_palavras

@@ -15,16 +15,11 @@ Este projeto tem como objetivo contar as palavras diferentes de um arquivo texto
 Para compilar o programa, use o comando `make`. O Makefile foi configurado para compilar o projeto corretamente.
 
 **Comandos Importantes (Windows)**:
-Para compilar e executar apenas o programa principal (sem os testes):
-`make main`
-Para compilar e executar o programa junto com os testes:
-`make all`
-Para rodar o Doxygen e gerar a documentação:
-`make javadoc`
-Para rodar apenas os testes:
-`make test`
-Para limpar os arquivos gerados:
-`make clean`
+  - `make main` (para compilar e executar apenas o programa principal (sem os testes))
+  - `make all`(para compilar e executar o programa junto com os testes)
+  - `make javadoc`(para rodar o Doxygen e gerar a documentação)
+  - `make test` (para rodar apenas os testes)
+  - `make clean` (para limpar os arquivos gerados)
 
 **Especificação**:
 - O arquivo de entrada deve conter palavras separadas por espaços ou quebras de linha. As palavras não devem ser normalizadas para minúsculas, conforme a especificação.

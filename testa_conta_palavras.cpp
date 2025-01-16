@@ -202,3 +202,14 @@ TEST_CASE("Contagem de palavras e exibição no terminal", "[contagem]") {
     }
 }
 
+
+TEST_CASE("Ler e ordenar somente uma palavra", "[ordenarPalavras]") {
+    std::vector<std::string> palavras = lerArquivo("tests_files/test10.txt");
+    std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+	ordenarPalavras(ocorrencias);
+
+	REQUIRE(ocorrencias[0].first == "é");
+
+	REQUIRE(ocorrencias[0].second == 1);
+
+}

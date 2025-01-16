@@ -102,7 +102,7 @@ TEST_CASE("Contagem de palavras no arquivo", "[contagem]") {
     REQUIRE(ocorrencias[4].second == 1);
 }
 
-TEST_CASE("Contagem de palavras e ordenação", "[arquivo]") {
+TEST_CASE("Contagem de palavras e ordenação por letras minúsculas e maiúsculas", "[arquivo]") {
     std::vector<std::string> palavras = lerArquivo("tests_files/test6.txt");
     std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
 	ordenarPalavras(ocorrencias);
@@ -122,4 +122,17 @@ TEST_CASE("Contagem de palavras e ordenação", "[arquivo]") {
     REQUIRE(ocorrencias[4].second == 1);
     REQUIRE(ocorrencias[5].second == 2);
     REQUIRE(ocorrencias[6].second == 1);
+}
+
+TEST_CASE("Ordenação por letras minúsculas, maiúsculas e tamanho da palavra", "[ordenarPalavras]") {
+    std::vector<std::string> palavras = lerArquivo("tests_files/test7.txt");
+    std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+	ordenarPalavras(ocorrencias);
+
+    REQUIRE(ocorrencias[0].first == "Ba");
+    REQUIRE(ocorrencias[1].first == "Ban");
+    REQUIRE(ocorrencias[2].first == "Banana");
+    REQUIRE(ocorrencias[3].first == "bana");
+    REQUIRE(ocorrencias[4].first == "ban");
+    REQUIRE(ocorrencias[5].first == "banana");
 }

@@ -89,7 +89,8 @@ std::vector<std::pair<std::string, int>> contarOcorrencias(const std::vector<std
 }
 
 /**
- * @brief Ordena um vetor de pares palavra-contagem de acordo com a ordem alfabética, começando pelas letras minúsculas e depois suas correspondentes maiúsculas.
+ * @brief Ordena um vetor de pares palavra-contagem de acordo com a ordem alfabética, começando pelas letras minúsculas, 
+ * depois suas correspondentes maiúsculas e por fim, o tamanho da palavra, priorizando palavras menores.
  *
  * @param ocorrencias [std::vector<std::pair<std::string, int>>&] - Vetor contendo as palavras e as contagens a serem ordenadas.
  *
@@ -116,6 +117,7 @@ void ordenarPalavras(std::vector<std::pair<std::string, int>>& ocorrencias) {
             }
             i++;
         }
+
         return a.first.size() < b.first.size();
     };
 

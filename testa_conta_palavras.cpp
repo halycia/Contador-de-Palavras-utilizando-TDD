@@ -129,10 +129,10 @@ TEST_CASE("Ordenação por letras minúsculas, maiúsculas e tamanho da palavra"
     std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
 	ordenarPalavras(ocorrencias);
 
-    REQUIRE(ocorrencias[0].first == "Ba");
-    REQUIRE(ocorrencias[1].first == "Ban");
-    REQUIRE(ocorrencias[2].first == "Banana");
-    REQUIRE(ocorrencias[3].first == "bana");
-    REQUIRE(ocorrencias[4].first == "ban");
-    REQUIRE(ocorrencias[5].first == "banana");
+	REQUIRE(ocorrencias[0].first == "ban");
+    REQUIRE(ocorrencias[1].first == "bana");
+    REQUIRE(ocorrencias[2].first == "banana");
+    REQUIRE(ocorrencias[3].first == "Ba");
+    REQUIRE(ocorrencias[4].first == "Ban");
+    REQUIRE(ocorrencias[5].first == "Banana");
 }

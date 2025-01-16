@@ -274,3 +274,19 @@ TEST_CASE("Verificar ordenação de palavras com comprimento crescente", "[orden
     REQUIRE(ocorrencias[1].second == 1);
     REQUIRE(ocorrencias[2].second == 1);
 }
+
+TEST_CASE("Contagem de palavras distintas sem repetição", "[contagem]") {
+    std::vector<std::string> palavras = lerArquivo("tests_files/test15.txt");
+    std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+
+    REQUIRE(ocorrencias.size() == 3);
+
+    REQUIRE(ocorrencias[0].first == "cat");
+    REQUIRE(ocorrencias[0].second == 1);
+
+    REQUIRE(ocorrencias[1].first == "dog");
+    REQUIRE(ocorrencias[1].second == 1);
+
+    REQUIRE(ocorrencias[2].first == "fish");
+    REQUIRE(ocorrencias[2].second == 1);
+}

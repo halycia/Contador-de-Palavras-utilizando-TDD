@@ -2,8 +2,8 @@
  * \file  conta_palavras.cpp
  */
 
- 
 #include "conta_palavras.hpp"
+#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <vector>
@@ -25,30 +25,33 @@
  *  - Retorna um vetor com as palavras extraídas do arquivo.
  *  - Se o arquivo não for aberto corretamente, o programa não faz nada e retorna o vetor vazio.
  */
-std::vector<std::string> lerArquivo(const std::string& nomeArquivo) {
-    std::ifstream arquivo(nomeArquivo);
-    std::vector<std::string> palavras;
-    std::string linha, palavra;
+std::vector<std::string> lerArquivo(const std::string &nomeArquivo)
+{
+	std::ifstream arquivo(nomeArquivo);
+	std::vector<std::string> palavras;
+	std::string linha, palavra;
 
-    if (arquivo.is_open()) {
-        while (std::getline(arquivo, linha)) {
-            std::istringstream stream(linha);
-            while (stream >> palavra) {
-                palavras.push_back(palavra);
-            }
-        }
-        arquivo.close();
-    }
+	if (arquivo.is_open())
+	{
+		while (std::getline(arquivo, linha))
+		{
+			std::istringstream stream(linha);
+			while (stream >> palavra)
+			{
+				palavras.push_back(palavra);
+			}
+		}
+		arquivo.close();
+	}
 
-    return palavras;
+	return palavras;
 }
-
 
 /**
  * @brief Conta a quantidade de ocorrências de cada palavra em um vetor de palavras.
  *
  * @param palavras [const std::vector<std::string>&] - Vetor contendo as palavras a serem analisadas.
- * 
+ *
  * @return Retorna um vetor de pares, onde cada par contém uma palavra e a quantidade de vezes que ela apareceu.
  *
  * @note
@@ -60,23 +63,47 @@ std::vector<std::string> lerArquivo(const std::string& nomeArquivo) {
  *  - A função retorna um vetor de pares (palavra, quantidade), onde cada palavra é única e a quantidade corresponde ao número de vezes que ela apareceu no vetor de entrada.
  *  - Se o vetor de palavras estiver vazio, a função retorna um vetor vazio.
  */
-std::vector<std::pair<std::string, int>> contarOcorrencias(const std::vector<std::string>& palavras) {
+std::vector<std::pair<std::string, int>> contarOcorrencias(const std::vector<std::string> &palavras)
+{
 	std::vector<std::pair<std::string, int>> ocorrencias;
 
-		for (const auto& palavra : palavras) {
-			auto it = std::find_if(ocorrencias.begin(), ocorrencias.end(),
-				[&palavra](const std::pair<std::string, int>& p) {
-					return p.first == palavra;
-				});
+	for (const auto &palavra : palavras)
+	{
+		auto it = std::find_if(ocorrencias.begin(), ocorrencias.end(),
+							   [&palavra](const std::pair<std::string, int> &p)
+							   {
+								   return p.first == palavra;
+							   });
 
-			if (it != ocorrencias.end()) {
-				it->second++;
-			} else {
-				ocorrencias.push_back({palavra, 1});
-			}
+		if (it != ocorrencias.end())
+		{
+			it->second++;
 		}
+		else
+		{
+			ocorrencias.push_back({palavra, 1});
+		}
+	}
 
-		return ocorrencias;
+	return ocorrencias;
 }
 
-void ordenarPalavras(std::vector<std::pair<std::string, int>>& ocorrencias);
+void ordenarPalavras(std::vector<std::pair<std::string, int>>& ocorrencias) {
+    std::string ordem = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+
+    auto comparador = [&ordem](const std::pair<std::string, int>& a, const std::pair<std::string, int>& b) {
+        size_t i = 0;
+        while (i < a.first.size() && i < b.first.size()) {
+            size_t posA = ordem.find(a.first[i]);
+            size_t posB = ordem.find(b.first[i]);
+
+            if (posA != posB) {
+                return posA < posB;
+            }
+            i++;
+        }
+        return a.first.size() < b.first.size();
+    };
+
+    std::sort(ocorrencias.begin(), ocorrencias.end(), comparador);
+}

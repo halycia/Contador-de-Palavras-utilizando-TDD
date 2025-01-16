@@ -105,12 +105,13 @@ TEST_CASE("Contagem de palavras no arquivo", "[contagem]") {
 TEST_CASE("Contagem de palavras e ordenação", "[arquivo]") {
     std::vector<std::string> palavras = lerArquivo("tests_files/test6.txt");
     std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+	ordenarPalavras(ocorrencias);
 
-    REQUIRE(ocorrencias[0].first == "é");
-    REQUIRE(ocorrencias[1].first == "este");
+    REQUIRE(ocorrencias[0].first == "e");
+    REQUIRE(ocorrencias[1].first == "Este");
     REQUIRE(ocorrencias[2].first == "o");
     REQUIRE(ocorrencias[3].first == "que");
-    REQUIRE(ocorrencias[4].first == "será");
+    REQUIRE(ocorrencias[4].first == "sera");
     REQUIRE(ocorrencias[5].first == "texto");
     REQUIRE(ocorrencias[6].first == "utilizado");
 

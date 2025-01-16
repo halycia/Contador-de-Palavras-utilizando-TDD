@@ -104,7 +104,7 @@ std::vector<std::pair<std::string, int>> contarOcorrencias(const std::vector<std
  *  - Se o vetor de pares estiver vazio, a função retorna um vetor vazio.
  */
 void ordenarPalavras(std::vector<std::pair<std::string, int>>& ocorrencias) {
-    std::string ordem = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+    std::string ordem = "áàâãaÁÀÂÃAbBçcÇCdDéêeÉÊEfFgGhHíiÍIjJkKlLmMnNóôõoÓÔÕOpPqQrRsStTúuÚUvVwWxXyYzZ";
 
     auto comparador = [&ordem](const std::pair<std::string, int>& a, const std::pair<std::string, int>& b) {
         size_t i = 0;

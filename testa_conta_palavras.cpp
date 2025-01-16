@@ -176,7 +176,7 @@ TEST_CASE("Ordenação por letras minúsculas, maiúsculas, tamanho da palavra e
     REQUIRE(ocorrencias[3].first == "que");
     REQUIRE(ocorrencias[4].first == "será");
     REQUIRE(ocorrencias[5].first == "texto");
-	REQUIRE(ocorrencias[5].first == "utilizado");
+	REQUIRE(ocorrencias[6].first == "utilizado");
 
 	REQUIRE(ocorrencias[0].second == 1);
     REQUIRE(ocorrencias[1].second == 1);

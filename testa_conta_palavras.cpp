@@ -260,3 +260,17 @@ TEST_CASE("Contagem de palavras únicas e repetidas com letras maiúsculas e min
     REQUIRE(ocorrencias[2].first == "banana");
     REQUIRE(ocorrencias[2].second == 2);
 }
+
+TEST_CASE("Verificar ordenação de palavras com comprimento crescente", "[ordenarPalavras]") {
+    std::vector<std::string> palavras = lerArquivo("tests_files/test14.txt");
+    std::vector<std::pair<std::string, int>> ocorrencias = contarOcorrencias(palavras);
+    ordenarPalavras(ocorrencias);
+
+    REQUIRE(ocorrencias[0].first == "a");
+    REQUIRE(ocorrencias[1].first == "ball");
+    REQUIRE(ocorrencias[2].first == "bat");
+
+    REQUIRE(ocorrencias[0].second == 1);
+    REQUIRE(ocorrencias[1].second == 1);
+    REQUIRE(ocorrencias[2].second == 1);
+}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>22_1037625_Halycia: testa_conta_palavras.cpp File Reference</title>
+<title>My Project: testa_conta_palavras.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,9 +32,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">22_1037625_Halycia
+   <div id="projectname">My Project
    </div>
-   <div id="projectbrief">Segundo trabalho de Metodos de Programacao: Contador de Palavras</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -104,13 +103,85 @@ $(function(){initNavTree('testa__conta__palavras_8cpp.html',''); initResizable(t
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">testa_conta_palavras.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;conta_palavras.hpp&quot;</code><br />
 <code>#include &quot;catch.hpp&quot;</code><br />
-</div></div><!-- contents -->
+<code>#include &lt;fstream&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a16eb3c6dea9c85b00a023064ab7de018" id="r_a16eb3c6dea9c85b00a023064ab7de018"><td class="memItemLeft" align="right" valign="top"><a id="a16eb3c6dea9c85b00a023064ab7de018" name="a16eb3c6dea9c85b00a023064ab7de018"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Teste de Abertura de Arquivo&quot;, &quot;[arquivo]&quot;)</td></tr>
+<tr class="separator:a16eb3c6dea9c85b00a023064ab7de018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97bfdfd5d9316976646fa4405321955d" id="r_a97bfdfd5d9316976646fa4405321955d"><td class="memItemLeft" align="right" valign="top"><a id="a97bfdfd5d9316976646fa4405321955d" name="a97bfdfd5d9316976646fa4405321955d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Ler conteúdo do arquivo&quot;, &quot;[arquivo]&quot;)</td></tr>
+<tr class="separator:a97bfdfd5d9316976646fa4405321955d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16e317267a6f31f6502879f972f9cadd" id="r_a16e317267a6f31f6502879f972f9cadd"><td class="memItemLeft" align="right" valign="top"><a id="a16e317267a6f31f6502879f972f9cadd" name="a16e317267a6f31f6502879f972f9cadd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Ler palavras do arquivo separadas por somente 1 espaço&quot;, &quot;[arquivo]&quot;)</td></tr>
+<tr class="separator:a16e317267a6f31f6502879f972f9cadd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26689ea915a032d8456a59701f7b511a" id="r_a26689ea915a032d8456a59701f7b511a"><td class="memItemLeft" align="right" valign="top"><a id="a26689ea915a032d8456a59701f7b511a" name="a26689ea915a032d8456a59701f7b511a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Ler palavras do arquivo separadas por 2 espaços&quot;, &quot;[arquivo]&quot;)</td></tr>
+<tr class="separator:a26689ea915a032d8456a59701f7b511a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e54edb38bf5737472dd861a977bfc8" id="r_aa2e54edb38bf5737472dd861a977bfc8"><td class="memItemLeft" align="right" valign="top"><a id="aa2e54edb38bf5737472dd861a977bfc8" name="aa2e54edb38bf5737472dd861a977bfc8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Ler palavras do arquivo separadas por 1 espaço e 3 espaços adicionais no início e fim da string&quot;, &quot;[arquivo]&quot;)</td></tr>
+<tr class="separator:aa2e54edb38bf5737472dd861a977bfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a582ef020c426d90777ae536cae7076c5" id="r_a582ef020c426d90777ae536cae7076c5"><td class="memItemLeft" align="right" valign="top"><a id="a582ef020c426d90777ae536cae7076c5" name="a582ef020c426d90777ae536cae7076c5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Ler palavras do arquivo separadas por quebra de linha&quot;, &quot;[arquivo]&quot;)</td></tr>
+<tr class="separator:a582ef020c426d90777ae536cae7076c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74e9b1ac0987698a86cb708100d1924" id="r_af74e9b1ac0987698a86cb708100d1924"><td class="memItemLeft" align="right" valign="top"><a id="af74e9b1ac0987698a86cb708100d1924" name="af74e9b1ac0987698a86cb708100d1924"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Ler palavras do arquivo separadas por tab&quot;, &quot;[arquivo]&quot;)</td></tr>
+<tr class="separator:af74e9b1ac0987698a86cb708100d1924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bf371be56b3f2c2729dcf3511c1c97" id="r_ac8bf371be56b3f2c2729dcf3511c1c97"><td class="memItemLeft" align="right" valign="top"><a id="ac8bf371be56b3f2c2729dcf3511c1c97" name="ac8bf371be56b3f2c2729dcf3511c1c97"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Contagem de palavras no arquivo&quot;, &quot;[contagem]&quot;)</td></tr>
+<tr class="separator:ac8bf371be56b3f2c2729dcf3511c1c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af454cc768612f52d59a80c232d73c4ac" id="r_af454cc768612f52d59a80c232d73c4ac"><td class="memItemLeft" align="right" valign="top"><a id="af454cc768612f52d59a80c232d73c4ac" name="af454cc768612f52d59a80c232d73c4ac"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Contagem de palavras e ordenação por letras minúsculas e maiúsculas&quot;, &quot;[arquivo]&quot;)</td></tr>
+<tr class="separator:af454cc768612f52d59a80c232d73c4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ac2ec19483dd0c602b49261d497c1a" id="r_ae0ac2ec19483dd0c602b49261d497c1a"><td class="memItemLeft" align="right" valign="top"><a id="ae0ac2ec19483dd0c602b49261d497c1a" name="ae0ac2ec19483dd0c602b49261d497c1a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Ordenação por letras minúsculas, maiúsculas e tamanho da palavra com primeira letra diferente&quot;, &quot;[ordenarPalavras]&quot;)</td></tr>
+<tr class="separator:ae0ac2ec19483dd0c602b49261d497c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7576501fc05c453d26c969483141c3ac" id="r_a7576501fc05c453d26c969483141c3ac"><td class="memItemLeft" align="right" valign="top"><a id="a7576501fc05c453d26c969483141c3ac" name="a7576501fc05c453d26c969483141c3ac"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Ordenação por letras minúsculas, maiúsculas e tamanho da palavra com palavras diferentes&quot;, &quot;[ordenarPalavras]&quot;)</td></tr>
+<tr class="separator:a7576501fc05c453d26c969483141c3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70db282c92b5662c47a595a5c7d7e587" id="r_a70db282c92b5662c47a595a5c7d7e587"><td class="memItemLeft" align="right" valign="top"><a id="a70db282c92b5662c47a595a5c7d7e587" name="a70db282c92b5662c47a595a5c7d7e587"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Ordenação por letras minúsculas, maiúsculas, tamanho da palavra e acentuação&quot;, &quot;[ordenarPalavras]&quot;)</td></tr>
+<tr class="separator:a70db282c92b5662c47a595a5c7d7e587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0577f7e1ceae514f566925db4b5506a2" id="r_a0577f7e1ceae514f566925db4b5506a2"><td class="memItemLeft" align="right" valign="top"><a id="a0577f7e1ceae514f566925db4b5506a2" name="a0577f7e1ceae514f566925db4b5506a2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Contagem de palavras e exibição no terminal&quot;, &quot;[contagem]&quot;)</td></tr>
+<tr class="separator:a0577f7e1ceae514f566925db4b5506a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a019f7abef1af0a4e9e77c270b8cfc56f" id="r_a019f7abef1af0a4e9e77c270b8cfc56f"><td class="memItemLeft" align="right" valign="top"><a id="a019f7abef1af0a4e9e77c270b8cfc56f" name="a019f7abef1af0a4e9e77c270b8cfc56f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Ler e ordenar somente uma palavra&quot;, &quot;[ordenarPalavras]&quot;)</td></tr>
+<tr class="separator:a019f7abef1af0a4e9e77c270b8cfc56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bff9cee2ebfaf983d451987978b9ecf" id="r_a6bff9cee2ebfaf983d451987978b9ecf"><td class="memItemLeft" align="right" valign="top"><a id="a6bff9cee2ebfaf983d451987978b9ecf" name="a6bff9cee2ebfaf983d451987978b9ecf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Ler e ordenar arquivo vazio&quot;, &quot;[ordenarPalavras]&quot;)</td></tr>
+<tr class="separator:a6bff9cee2ebfaf983d451987978b9ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd9e3f408dd25108432c49fc4a076e9" id="r_a4cd9e3f408dd25108432c49fc4a076e9"><td class="memItemLeft" align="right" valign="top"><a id="a4cd9e3f408dd25108432c49fc4a076e9" name="a4cd9e3f408dd25108432c49fc4a076e9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Ler e ordenar palavras com diferentes maiúsculas e minúsculas&quot;, &quot;[ordenarPalavras]&quot;)</td></tr>
+<tr class="separator:a4cd9e3f408dd25108432c49fc4a076e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f8292437964b768647bc6cbc7ac105" id="r_a66f8292437964b768647bc6cbc7ac105"><td class="memItemLeft" align="right" valign="top"><a id="a66f8292437964b768647bc6cbc7ac105" name="a66f8292437964b768647bc6cbc7ac105"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Contagem de palavras únicas e repetidas com letras maiúsculas e minúsculas&quot;, &quot;[contagem]&quot;)</td></tr>
+<tr class="separator:a66f8292437964b768647bc6cbc7ac105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a021d67ed395d5647d35a229956c3bc4e" id="r_a021d67ed395d5647d35a229956c3bc4e"><td class="memItemLeft" align="right" valign="top"><a id="a021d67ed395d5647d35a229956c3bc4e" name="a021d67ed395d5647d35a229956c3bc4e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Verificar ordenação de palavras com comprimento crescente&quot;, &quot;[ordenarPalavras]&quot;)</td></tr>
+<tr class="separator:a021d67ed395d5647d35a229956c3bc4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f6acb38b4c53f192a01e03febf4af6" id="r_ae5f6acb38b4c53f192a01e03febf4af6"><td class="memItemLeft" align="right" valign="top"><a id="ae5f6acb38b4c53f192a01e03febf4af6" name="ae5f6acb38b4c53f192a01e03febf4af6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Contagem de palavras distintas sem repetição&quot;, &quot;[contagem]&quot;)</td></tr>
+<tr class="separator:ae5f6acb38b4c53f192a01e03febf4af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b4ccd1c1df4dccee29fd7fb0aef42f" id="r_af4b4ccd1c1df4dccee29fd7fb0aef42f"><td class="memItemLeft" align="right" valign="top"><a id="af4b4ccd1c1df4dccee29fd7fb0aef42f" name="af4b4ccd1c1df4dccee29fd7fb0aef42f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Verificar contagem de palavras repetidas&quot;, &quot;[contagem]&quot;)</td></tr>
+<tr class="separator:af4b4ccd1c1df4dccee29fd7fb0aef42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2448c98ff3b4c07e2afdbad54b4adaed" id="r_a2448c98ff3b4c07e2afdbad54b4adaed"><td class="memItemLeft" align="right" valign="top"><a id="a2448c98ff3b4c07e2afdbad54b4adaed" name="a2448c98ff3b4c07e2afdbad54b4adaed"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Contagem de palavras com apenas 1 palavra no arquivo&quot;, &quot;[contagem]&quot;)</td></tr>
+<tr class="separator:a2448c98ff3b4c07e2afdbad54b4adaed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa758f615e8835df4aa36906ef4b3c803" id="r_aa758f615e8835df4aa36906ef4b3c803"><td class="memItemLeft" align="right" valign="top"><a id="aa758f615e8835df4aa36906ef4b3c803" name="aa758f615e8835df4aa36906ef4b3c803"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TEST_CASE</b> (&quot;Contagem de um caracter&quot;)</td></tr>
+<tr class="separator:aa758f615e8835df4aa36906ef4b3c803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

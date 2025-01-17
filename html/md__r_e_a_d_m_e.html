@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: File List</title>
+<title>My Project: README</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -76,7 +76,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('files.html',''); initResizable(true); });
+$(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -101,18 +101,53 @@ $(function(){initNavTree('files.html',''); initResizable(true); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">File List</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">README</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all documented files with brief descriptions:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="conta__palavras_8cpp.html" target="_self">conta_palavras.cpp</a></td><td class="desc"></td></tr>
-<tr id="row_1_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="conta__palavras_8hpp_source.html"><span class="icondoc"></span></a><b>conta_palavras.hpp</b></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="testa__conta__palavras_8cpp.html" target="_self">testa_conta_palavras.cpp</a></td><td class="desc"></td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+<div class="textblock"><p><b>Objetivo</b>: Este projeto tem como objetivo contar as palavras diferentes de um arquivo texto, diferenciando maiúsculas e minúsculas, e listar as palavras com o número de ocorrências em ordem alfabética. O projeto deve ser desenvolvido utilizando TDD (Test-Driven Development), em C++, com o uso de testes utilizando o Catch framework. A cada passo de desenvolvimento, o código deve ser verificado e revisado de acordo com as especificações fornecidas.</p>
+<p><b>Estrutura do Programa</b>:</p><ul>
+<li>O código será dividido em módulos:<ul>
+<li><code>main.cpp</code> (permite separar a lógica do programa da execução e dos testes)</li>
+<li><code><a class="el" href="conta__palavras_8cpp.html">conta_palavras.cpp</a></code> (implementação da contagem de palavras)</li>
+<li><code><a class="el" href="conta__palavras_8hpp_source.html">conta_palavras.hpp</a></code> (declarações da função de contagem de palavras)</li>
+<li><code><a class="el" href="testa__conta__palavras_8cpp.html">testa_conta_palavras.cpp</a></code> (testes para verificar a funcionalidade)</li>
+<li><code>Makefile</code> (para compilar o código)</li>
+<li><code>input.txt</code> (arquivo de entrada)</li>
+<li><code>script_doxygen.py</code> (para rodar o Doxygen e gerar documentação)</li>
+</ul>
+</li>
+</ul>
+<p><b>Compilação</b>: Para compilar o programa, use o comando <code>make</code>. O Makefile foi configurado para compilar o projeto corretamente.</p>
+<p><b>Comandos Importantes (Windows)</b>:</p><ul>
+<li><code>make main</code> (para compilar e executar apenas o programa principal (sem os testes))</li>
+<li><code>make all</code>(para compilar e executar o programa junto com os testes)</li>
+<li><code>make javadoc</code>(para rodar o Doxygen e gerar a documentação)</li>
+<li><code>make test</code> (para rodar apenas os testes)</li>
+<li><code>make clean</code> (para limpar os arquivos gerados)</li>
+</ul>
+<p><b>Especificação</b>:</p><ul>
+<li>O arquivo de entrada deve conter palavras separadas por espaços ou quebras de linha. As palavras não devem ser normalizadas para minúsculas, conforme a especificação.</li>
+<li>A saída deve ser no formato <code>palavra: quantidade</code>, onde <code>palavra</code> é a palavra encontrada e <code>quantidade</code> é o número de ocorrências.</li>
+</ul>
+<p><b>Processo de Desenvolvimento</b>: O desenvolvimento deve seguir a metodologia TDD, com os seguintes passos:</p><ol type="1">
+<li>Escrever um teste que falha.</li>
+<li>Implementar o código necessário para passar o teste.</li>
+<li>Refatorar o código, se necessário.</li>
+<li>Realizar um commit para cada mudança significativa.</li>
+</ol>
+<p><b>Javadoc</b>: Para documentar os códigos dos arquivos main.cpp e <a class="el" href="conta__palavras_8cpp.html">conta_palavras.cpp</a>, será utilizado o estilo de comentários Javadoc. Estes comentários são usados para gerar documentação automática através do Doxygen. Cada função no código deve ser precedida por um comentário no estilo Javadoc, contendo:</p><ul>
+<li>Uma breve descrição da função</li>
+<li>Descrição dos parâmetros, se houver</li>
+<li>Descrição do valor de retorno, se houver</li>
+</ul>
+<p><b>Testes</b>: Os testes devem ser escritos no arquivo <code><a class="el" href="testa__conta__palavras_8cpp.html">testa_conta_palavras.cpp</a></code> e devem ser desenvolvidos utilizando o framework Catch versão v1.12.1. A cada novo teste, um commit deve ser realizado. Os testes devem cobrir:</p><ul>
+<li>Contagem de palavras em um arquivo com separação por espaços e quebras de linha.</li>
+<li>Diferença entre maiúsculas e minúsculas.</li>
+<li>Ordenação das palavras por ordem alfabética. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

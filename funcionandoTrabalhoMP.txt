@@ -1,0 +1,14 @@
+funcionando:
+all
+compile
+velha.o
+testa velha
+test
+gcov
+debug
+cppcheck
+clean
+
+não funcionando:
+cpplint
+valgrind (wsl)

@@ -1,5 +1,13 @@
 var searchData=
 [
-  ['velha_2ecpp_0',['velha.cpp',['../velha_8cpp.html',1,'']]],
-  ['verificavelha_1',['VerificaVelha',['../velha_8cpp.html#a9a79eba727abd2979d43ec648ed428e9',1,'velha.cpp']]]
+  ['saída_3a_0',['Saída:',['../conta__palavras_8hpp.html#autotoc_md1',1,'Assertivas de Saída:'],['../conta__palavras_8hpp.html#autotoc_md3',1,'Assertivas de Saída:'],['../conta__palavras_8hpp.html#autotoc_md5',1,'Assertivas de Saída:']]],
+  ['search_1',['Search',['../namespacecpplint.html#a515e256f8ccda50d15b9b7401f5264f7',1,'cpplint']]],
+  ['seenopenbrace_2',['SeenOpenBrace',['../classcpplint_1_1_nesting_state.html#aba98d984db5687df0825d005a78e6be9',1,'cpplint::NestingState']]],
+  ['setcountingstyle_3',['SetCountingStyle',['../classcpplint_1_1___cpp_lint_state.html#a6a31db7db51e0bfc0da9c28fec67bb35',1,'cpplint::_CppLintState']]],
+  ['setfilters_4',['SetFilters',['../classcpplint_1_1___cpp_lint_state.html#a27e58246c0717deb223bba71d253f930',1,'cpplint::_CppLintState']]],
+  ['setoutputformat_5',['SetOutputFormat',['../classcpplint_1_1___cpp_lint_state.html#a85b3cee5d09f6703374c744a2346c0b2',1,'cpplint::_CppLintState']]],
+  ['setquiet_6',['SetQuiet',['../classcpplint_1_1___cpp_lint_state.html#a41ee16fac5605b90fbc5c9b436a0f341',1,'cpplint::_CppLintState']]],
+  ['setverboselevel_7',['SetVerboseLevel',['../classcpplint_1_1___cpp_lint_state.html#a3994cb522c90a1822ecc3b3b4db9185e',1,'cpplint::_CppLintState']]],
+  ['shouldchecknamespaceindentation_8',['ShouldCheckNamespaceIndentation',['../namespacecpplint.html#a9325611c171591900d6eeeff1daf1cb6',1,'cpplint']]],
+  ['split_9',['Split',['../classcpplint_1_1_file_info.html#a5e303a91249d059740177b183888e89a',1,'cpplint::FileInfo']]]
 ];

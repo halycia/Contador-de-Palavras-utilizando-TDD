@@ -45,5 +45,6 @@ var searchData=
   ['cleansecomments_42',['CleanseComments',['../namespacecpplint.html#ae9566310f2866027f14cc468ad85635a',1,'cpplint']]],
   ['cleanserawstrings_43',['CleanseRawStrings',['../namespacecpplint.html#a4fae6fc97d3683e4f74115c09e1f223d',1,'cpplint']]],
   ['closeexpression_44',['CloseExpression',['../namespacecpplint.html#a1b6021bb43f15b2ba6d35664a529b9b2',1,'cpplint']]],
-  ['count_45',['Count',['../classcpplint_1_1___function_state.html#ac94f884412b6562e18bc2675f43d0fc3',1,'cpplint::_FunctionState']]]
+  ['contarocorrencias_45',['contarOcorrencias',['../conta__palavras_8cpp.html#a1ba990f581a3b3c5a81a75a2e51ab349',1,'conta_palavras.cpp']]],
+  ['count_46',['Count',['../classcpplint_1_1___function_state.html#ac94f884412b6562e18bc2675f43d0fc3',1,'cpplint::_FunctionState']]]
 ];

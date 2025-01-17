@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "script_doxygen", "namespacescript__doxygen.html", null ]
+    [ "cpplint", "namespacecpplint.html", "namespacecpplint" ]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>22_1037625_Halycia: conta_palavras.cpp File Reference</title>
+<title>My Project: conta_palavras.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,9 +32,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">22_1037625_Halycia
+   <div id="projectname">My Project
    </div>
-   <div id="projectbrief">Segundo trabalho de Metodos de Programacao: Contador de Palavras</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -109,39 +108,138 @@ $(function(){initNavTree('conta__palavras_8cpp.html',''); initResizable(true); }
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;conta_palavras.hpp&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9a79eba727abd2979d43ec648ed428e9" id="r_a9a79eba727abd2979d43ec648ed428e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a79eba727abd2979d43ec648ed428e9">VerificaVelha</a> (int velha[3][3])</td></tr>
-<tr class="memdesc:a9a79eba727abd2979d43ec648ed428e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">verifica situacao do jogo da velha  <br /></td></tr>
-<tr class="separator:a9a79eba727abd2979d43ec648ed428e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a690dbbcd96df0d7c3adb0413f8f246cd" id="r_a690dbbcd96df0d7c3adb0413f8f246cd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a690dbbcd96df0d7c3adb0413f8f246cd">lerArquivo</a> (const std::string &amp;nomeArquivo)</td></tr>
+<tr class="memdesc:a690dbbcd96df0d7c3adb0413f8f246cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">lê o conteúdo do arquivo .txt, separa por espaço e armazena suas palavras em um vetor.  <br /></td></tr>
+<tr class="separator:a690dbbcd96df0d7c3adb0413f8f246cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba990f581a3b3c5a81a75a2e51ab349" id="r_a1ba990f581a3b3c5a81a75a2e51ab349"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::string, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ba990f581a3b3c5a81a75a2e51ab349">contarOcorrencias</a> (const std::vector&lt; std::string &gt; &amp;palavras)</td></tr>
+<tr class="memdesc:a1ba990f581a3b3c5a81a75a2e51ab349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conta a quantidade de ocorrências de cada palavra em um vetor de palavras.  <br /></td></tr>
+<tr class="separator:a1ba990f581a3b3c5a81a75a2e51ab349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5890b7edb0d8bb6ae76a13a7ebbedaf1" id="r_a5890b7edb0d8bb6ae76a13a7ebbedaf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5890b7edb0d8bb6ae76a13a7ebbedaf1">ordenarPalavras</a> (std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;ocorrencias)</td></tr>
+<tr class="memdesc:a5890b7edb0d8bb6ae76a13a7ebbedaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordena um vetor de pares palavra-contagem de acordo com a ordem alfabética, começando pelas letras acentuadas, depois minúsculas, depois suas correspondentes maiúsculas e por fim, o tamanho da palavra, priorizando palavras menores.  <br /></td></tr>
+<tr class="separator:a5890b7edb0d8bb6ae76a13a7ebbedaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a9a79eba727abd2979d43ec648ed428e9" name="a9a79eba727abd2979d43ec648ed428e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a79eba727abd2979d43ec648ed428e9">&#9670;&#160;</a></span>VerificaVelha()</h2>
+<a id="a1ba990f581a3b3c5a81a75a2e51ab349" name="a1ba990f581a3b3c5a81a75a2e51ab349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba990f581a3b3c5a81a75a2e51ab349">&#9670;&#160;</a></span>contarOcorrencias()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int VerificaVelha </td>
+          <td class="memname">std::vector&lt; std::pair&lt; std::string, int &gt; &gt; contarOcorrencias </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>velha</em></span>[3][3]</td><td>)</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>palavras</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>verifica situacao do jogo da velha </p>
-<dl class="section author"><dt>Author</dt><dd>Programador </dd></dl>
+<p>Conta a quantidade de ocorrências de cada palavra em um vetor de palavras. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">velha</td><td>descreve o parametro</td></tr>
+    <tr><td class="paramname">palavras</td><td>[const std::vector&lt;std::string&gt;&amp;] - Vetor contendo as palavras a serem analisadas.</td></tr>
   </table>
   </dd>
 </dl>
-<p>Descrever o que a funcao faz </p>
-<p>&lt; retorna 1 para teste</p>
+<dl class="section return"><dt>Returns</dt><dd>Retorna um vetor de pares, onde cada par contém uma palavra e a quantidade de vezes que ela apareceu.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd></dd></dl>
+<h3><a class="anchor" id="autotoc_md2"></a>
+Assertivas de Entrada:</h3>
+<ul>
+<li>O vetor de palavras deve ser composto apenas por strings não vazias.</li>
+<li>A função diferencia entre maiúsculas e minúsculas (ex: "Palavra" e "palavra" são tratadas como palavras distintas).</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md3"></a>
+Assertivas de Saída:</h3>
+<ul>
+<li>A função retorna um vetor de pares (palavra, quantidade), onde cada palavra é única e a quantidade corresponde ao número de vezes que ela apareceu no vetor de entrada.</li>
+<li>Se o vetor de palavras estiver vazio, a função retorna um vetor vazio. </li>
+</ul>
+
+</div>
+</div>
+<a id="a690dbbcd96df0d7c3adb0413f8f246cd" name="a690dbbcd96df0d7c3adb0413f8f246cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a690dbbcd96df0d7c3adb0413f8f246cd">&#9670;&#160;</a></span>lerArquivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; lerArquivo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>nomeArquivo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lê o conteúdo do arquivo .txt, separa por espaço e armazena suas palavras em um vetor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nomeArquivo</td><td>[const std::string&amp;] - nome do arquivo .txt a ser lido</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>retorna o vetor linhas com cada linha lida. Se não for aberto, o programa não faz nada e retorna o vetor vazio.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd></dd></dl>
+<h3><a class="anchor" id="autotoc_md0"></a>
+Assertivas de Entrada:</h3>
+<ul>
+<li>deve ser um arquivo .txt</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md1"></a>
+Assertivas de Saída:</h3>
+<ul>
+<li>Retorna um vetor com as palavras extraídas do arquivo.</li>
+<li>Se o arquivo não for aberto corretamente, o programa não faz nada e retorna o vetor vazio. </li>
+</ul>
+
+</div>
+</div>
+<a id="a5890b7edb0d8bb6ae76a13a7ebbedaf1" name="a5890b7edb0d8bb6ae76a13a7ebbedaf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5890b7edb0d8bb6ae76a13a7ebbedaf1">&#9670;&#160;</a></span>ordenarPalavras()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ordenarPalavras </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ocorrencias</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ordena um vetor de pares palavra-contagem de acordo com a ordem alfabética, começando pelas letras acentuadas, depois minúsculas, depois suas correspondentes maiúsculas e por fim, o tamanho da palavra, priorizando palavras menores. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ocorrencias</td><td>[std::vector&lt;std::pair&lt;std::string, int&gt;&gt;&amp;] - Vetor contendo as palavras e as contagens a serem ordenadas.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd></dd></dl>
+<h3><a class="anchor" id="autotoc_md4"></a>
+Assertivas de Entrada:</h3>
+<ul>
+<li>O vetor de pares deve conter palavras compostas por caracteres presentes na string <code>ordem</code>.</li>
+<li>A string <code>ordem</code> define a ordem desejada das letras, considerando que a ordem de prioridade é letras acentuadas, minúsculas, maiúsculas e, por fim, tamanho da palavra.</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Assertivas de Saída:</h3>
+<ul>
+<li>A função retorna um vetor ordenado de pares (palavra, contagem), onde as palavras são ordenadas conforme a string <code>ordem</code>.</li>
+<li>Se o vetor de pares estiver vazio, a função retorna um vetor vazio. </li>
+</ul>
 
 </div>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>22_1037625_Halycia: conta_palavras.hpp Source File</title>
+<title>My Project: conta_palavras.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,9 +32,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">22_1037625_Halycia
+   <div id="projectname">My Project
    </div>
-   <div id="projectbrief">Segundo trabalho de Metodos de Programacao: Contador de Palavras</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -106,10 +105,23 @@ $(function(){initNavTree('conta__palavras_8hpp_source.html',''); initResizable(t
   <div class="headertitle"><div class="title">conta_palavras.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keywordtype">int</span> <a class="code hl_function" href="conta__palavras_8cpp.html#a9a79eba727abd2979d43ec648ed428e9">VerificaVelha</a>( <span class="keywordtype">int</span> velha[3][3] ); </div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CONTA_PALAVRAS_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CONTA_PALAVRAS_HPP</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="ttc" id="aconta__palavras_8cpp_html_a9a79eba727abd2979d43ec648ed428e9"><div class="ttname"><a href="conta__palavras_8cpp.html#a9a79eba727abd2979d43ec648ed428e9">VerificaVelha</a></div><div class="ttdeci">int VerificaVelha(int velha[3][3])</div><div class="ttdoc">verifica situacao do jogo da velha</div><div class="ttdef"><b>Definition</b> conta_palavras.cpp:16</div></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>std::vector&lt;std::string&gt; <a class="code hl_function" href="conta__palavras_8cpp.html#a690dbbcd96df0d7c3adb0413f8f246cd">lerArquivo</a>(<span class="keyword">const</span> std::string&amp; nomeArquivo);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>std::vector&lt;std::pair&lt;std::string, int&gt;&gt; <a class="code hl_function" href="conta__palavras_8cpp.html#a1ba990f581a3b3c5a81a75a2e51ab349">contarOcorrencias</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; palavras);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keywordtype">void</span> <a class="code hl_function" href="conta__palavras_8cpp.html#a5890b7edb0d8bb6ae76a13a7ebbedaf1">ordenarPalavras</a>(std::vector&lt;std::pair&lt;std::string, int&gt;&gt;&amp; ocorrencias);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aconta__palavras_8cpp_html_a1ba990f581a3b3c5a81a75a2e51ab349"><div class="ttname"><a href="conta__palavras_8cpp.html#a1ba990f581a3b3c5a81a75a2e51ab349">contarOcorrencias</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; std::string, int &gt; &gt; contarOcorrencias(const std::vector&lt; std::string &gt; &amp;palavras)</div><div class="ttdoc">Conta a quantidade de ocorrências de cada palavra em um vetor de palavras.</div><div class="ttdef"><b>Definition</b> conta_palavras.cpp:66</div></div>
+<div class="ttc" id="aconta__palavras_8cpp_html_a5890b7edb0d8bb6ae76a13a7ebbedaf1"><div class="ttname"><a href="conta__palavras_8cpp.html#a5890b7edb0d8bb6ae76a13a7ebbedaf1">ordenarPalavras</a></div><div class="ttdeci">void ordenarPalavras(std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;ocorrencias)</div><div class="ttdoc">Ordena um vetor de pares palavra-contagem de acordo com a ordem alfabética, começando pelas letras ac...</div><div class="ttdef"><b>Definition</b> conta_palavras.cpp:107</div></div>
+<div class="ttc" id="aconta__palavras_8cpp_html_a690dbbcd96df0d7c3adb0413f8f246cd"><div class="ttname"><a href="conta__palavras_8cpp.html#a690dbbcd96df0d7c3adb0413f8f246cd">lerArquivo</a></div><div class="ttdeci">std::vector&lt; std::string &gt; lerArquivo(const std::string &amp;nomeArquivo)</div><div class="ttdoc">lê o conteúdo do arquivo .txt, separa por espaço e armazena suas palavras em um vetor.</div><div class="ttdef"><b>Definition</b> conta_palavras.cpp:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

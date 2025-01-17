@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['search_0',['Search',['../namespacecpplint.html#a515e256f8ccda50d15b9b7401f5264f7',1,'cpplint']]],
-  ['seenopenbrace_1',['SeenOpenBrace',['../classcpplint_1_1_nesting_state.html#aba98d984db5687df0825d005a78e6be9',1,'cpplint::NestingState']]],
-  ['setcountingstyle_2',['SetCountingStyle',['../classcpplint_1_1___cpp_lint_state.html#a6a31db7db51e0bfc0da9c28fec67bb35',1,'cpplint::_CppLintState']]],
-  ['setfilters_3',['SetFilters',['../classcpplint_1_1___cpp_lint_state.html#a27e58246c0717deb223bba71d253f930',1,'cpplint::_CppLintState']]],
-  ['setoutputformat_4',['SetOutputFormat',['../classcpplint_1_1___cpp_lint_state.html#a85b3cee5d09f6703374c744a2346c0b2',1,'cpplint::_CppLintState']]],
-  ['setquiet_5',['SetQuiet',['../classcpplint_1_1___cpp_lint_state.html#a41ee16fac5605b90fbc5c9b436a0f341',1,'cpplint::_CppLintState']]],
-  ['setverboselevel_6',['SetVerboseLevel',['../classcpplint_1_1___cpp_lint_state.html#a3994cb522c90a1822ecc3b3b4db9185e',1,'cpplint::_CppLintState']]],
-  ['shouldchecknamespaceindentation_7',['ShouldCheckNamespaceIndentation',['../namespacecpplint.html#a9325611c171591900d6eeeff1daf1cb6',1,'cpplint']]],
-  ['split_8',['Split',['../classcpplint_1_1_file_info.html#a5e303a91249d059740177b183888e89a',1,'cpplint::FileInfo']]]
+  ['parsearguments_0',['ParseArguments',['../namespacecpplint.html#a3f8324de8f8a4138491fb973817322da',1,'cpplint']]],
+  ['parsenolintsuppressions_1',['ParseNolintSuppressions',['../namespacecpplint.html#a22a0d25680a41ec23d754425a73e47c5',1,'cpplint']]],
+  ['pathsplittolist_2',['PathSplitToList',['../namespacecpplint.html#a7ad752dd62ed4ccfed7d956cf1b18f7e',1,'cpplint']]],
+  ['printcategories_3',['PrintCategories',['../namespacecpplint.html#a3bba987526e2d3e4eb3d0a25cf80f1dc',1,'cpplint']]],
+  ['printerrorcounts_4',['PrintErrorCounts',['../classcpplint_1_1___cpp_lint_state.html#a528ba32683a528c319fe88f72c1b894e',1,'cpplint::_CppLintState']]],
+  ['printusage_5',['PrintUsage',['../namespacecpplint.html#a909dd459f639e414cbf5ffd91ce8c1a4',1,'cpplint']]],
+  ['processconfigoverrides_6',['ProcessConfigOverrides',['../namespacecpplint.html#a20022b1ac01d93c470fbd25610776a33',1,'cpplint']]],
+  ['processfile_7',['ProcessFile',['../namespacecpplint.html#acecb7a35ccd8dc94f7759b8740496f5f',1,'cpplint']]],
+  ['processfiledata_8',['ProcessFileData',['../namespacecpplint.html#af49dbbca393312acfa3a46984665eaff',1,'cpplint']]],
+  ['processglobalsuppresions_9',['ProcessGlobalSuppresions',['../namespacecpplint.html#a084823b16c0140d867262fd987ab204a',1,'cpplint']]],
+  ['processline_10',['ProcessLine',['../namespacecpplint.html#a60ab7d00cbd976925382b70bbf1fb2cf',1,'cpplint']]]
 ];
